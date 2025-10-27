@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+
+<head><style>
+form label { display: block;}
+form input,
+form button { display: block; width: 100%; max-width: 300px;}
+</style></head>
+
+<header>Ejercicio 6</header>
+
+
+<fieldset>
+<legend>Client particular</legend>
+
+<form action="resultats.html" method="post">
+<label>Nom:
+<input type="text" id="name" name="name" placeholder="Nombre">
+</label>
+<label>Edat:
+<input type="number" id="age" name="age" placeholder="Edat">
+</label>
+<label>Correu electrònic:
+<input type="email" id="email" name="email" placeholder="Correu electrònic">
+</label>
+<label>Contrasenya:
+<input type="password" id="contrasenya" name="contrasenya" placeholder="Contrasenya">
+</label>Suscribirse:
+<input type="checkbox" id="checkbox" name="checkbox" placeholder="checkbox">
+</label>
+</fieldset>
+
+<select name="sel" multiple size="9"  id="multicheck" name="multicheck" placeholder="multicheck">
+<option>PS5</option>
+<option>PS4</option>
+<option>Xbox Series X</option>
+<option>Xbox Series S</option>
+<option>Xbox One</option>
+<option>Nintendo Switch </option>
+<option>Nintendo Switch Lite </option>
+<option>Nintendo Switch 2</option>
+<option>Nintendo 3DS</option>
+<option>Steam Deck</option>
+</select>
+
+<fieldset>
+<label>
+<input type="radio" id="idomaCatala" name="idioma" value="catala" required>
+Català
+</label>
+
+<label>
+<input type="radio" id="idiomaCastella" name="idioma" value="castella" required>
+Castellà
+</label>
+</fieldset>
+
+Comentaris:
+<fieldset>
+<textarea name="textArea" cols="40" rows="8" placeholder="Espai per comentaris.">
+</textarea>
+</fieldset>
+
+<button type="submit" id="buttonEnviar" name="buttonEnviar" value="buttonEnviar" required>Enviar</button>
+</form>
+
+
+</html>
