@@ -14,20 +14,20 @@ form button { display: block; width: 100%; max-width: 300px;}
 <fieldset>
 <legend>Client particular</legend>
 
-<form action="resultats.html" method="post">
+<form action="paginas2.html" method="post" required>
 <label>Nom:
-<input type="text" id="name" name="name" placeholder="Nombre">
+<input type="text" id="name" name="name" placeholder="Nombre" required>
 </label>
 <label>Edat:
-<input type="number" id="age" name="age" placeholder="Edat">
+<input type="number" id="age" name="age" placeholder="Edat" required min="18">
 </label>
 <label>Correu electrònic:
-<input type="email" id="email" name="email" placeholder="Correu electrònic">
+<input type="email" id="email" name="email" placeholder="Correu electrònic" required>
 </label>
 <label>Contrasenya:
-<input type="password" id="contrasenya" name="contrasenya" placeholder="Contrasenya">
+<input type="password" id="contrasenya" name="contrasenya" placeholder="Contrasenya" required minlength="8" maxlength="12">
 </label>Suscribirse:
-<input type="checkbox" id="checkbox" name="checkbox" placeholder="checkbox">
+<input type="checkbox" id="checkbox" name="checkbox" placeholder="checkbox" >
 </label>
 </fieldset>
 
@@ -54,11 +54,18 @@ Català
 <input type="radio" id="idiomaCastella" name="idioma" value="castella" required>
 Castellà
 </label>
+
+<label>
+<input type="radio" id="idiomaInglés" name="idioma" value="inglés" required>
+Anglès
+</label>
 </fieldset>
+
+
 
 Comentaris:
 <fieldset>
-<textarea name="textArea" cols="40" rows="8" placeholder="Espai per comentaris.">
+<textarea name="textArea" cols="50" rows="7" placeholder="Espai per comentaris.">
 </textarea>
 </fieldset>
 
