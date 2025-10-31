@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-
-<head><style>
+<head>
+<title>Ejercicio 6</title>
+<style>
 form label { display: block;}
 form input,
 form button { display: block; width: 100%; max-width: 300px;}
 </style></head>
 
+<body>
 <header>Ejercicio 6</header>
 
 
+
+
+
+<form action="paginas2.html" method="post" >
+
 <fieldset>
 <legend>Client particular</legend>
-
-<form action="paginas2.html" method="post" required>
 <label>Nom:
 <input type="text" id="name" name="name" placeholder="Nombre" required>
 </label>
@@ -26,12 +31,13 @@ form button { display: block; width: 100%; max-width: 300px;}
 </label>
 <label>Contrasenya:
 <input type="password" id="contrasenya" name="contrasenya" placeholder="Contrasenya" required minlength="8" maxlength="12">
-</label>Suscribirse:
+</label>
+<label>Suscribirse:
 <input type="checkbox" id="checkbox" name="checkbox" placeholder="checkbox" >
 </label>
 </fieldset>
 
-<select name="sel" multiple size="9"  id="multicheck" name="multicheck" placeholder="multicheck">
+<select name="sel" multiple size="9"  id="multicheck">
 <option>PS5</option>
 <option>PS4</option>
 <option>Xbox Series X</option>
@@ -63,14 +69,15 @@ Anglès
 
 
 
-Comentaris:
-<fieldset>
+<label>
+<fieldset>Comentaris:
 <textarea name="textArea" cols="50" rows="7" placeholder="Espai per comentaris.">
 </textarea>
+</label>
 </fieldset>
 
-<button type="submit" id="buttonEnviar" name="buttonEnviar" value="buttonEnviar" required>Enviar</button>
+<button type="submit" id="buttonEnviar" name="buttonEnviar" value="buttonEnviar" >Enviar</button>
 </form>
-
+</body>
 
 </html>
