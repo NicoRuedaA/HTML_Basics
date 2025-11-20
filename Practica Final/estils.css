@@ -3,7 +3,7 @@
   src: url(fonts/Rubik/static/Rubik-Regular.ttf);
 }
 
-* {
+html {
   background-color: #f4daf5;
 }
 
@@ -26,3 +26,4 @@ img {
   display: block;
   margin: 0 auto;
 }
+

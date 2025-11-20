@@ -1,55 +1,81 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="estils.css" />
+
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG Responsive</title>
-    <style>
-      body {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-      }
-
-      svg {
-        width: 100%;
-        height: auto;
-        max-width: 600px; /* puedes ajustar o eliminar este límite */
-      }
-    </style>
+    <title>Nicolás Daniel Rueda Araque</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Aquesta és la meva web" />
+    <meta name="author" content="Nicolás Rueda" />
+    <!-- indico la autoria -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- indico visión responsive -->
+    <meta name="robots" content="index, follow" />
+    <!-- index indica que que el contenido se puede indexar. follow que los enlaces a la pagina tambien -->
+    <meta name="theme-color" content="#f00" />
+    <!-- indico visión responsive-->
+    <link rel="icon" type="image/jpg" href="favicon.png" />
+    <!-- iconito de arriba en la pestaña -->
   </head>
+
   <body>
-    <svg viewBox="0 0 210 120" preserveAspectRatio="xMidYMid meet">
-      <rect x="5" y="5" rx="15" ry="15" width="200" height="80" style="stroke:black;stroke-width:2"/>
-      <rect x="5" y="5" rx="15" ry="15" width="40" height="80" style="fill:DarkTurquoise;stroke:black;stroke-width:1" />
-      <rect x="165" y="5" rx="15" ry="15" width="40" height="80" style="fill:rgb(255,64,32);stroke:black;stroke-width:1" />
-      <rect x="30" y="5" width="150" height="80" style="fill:dimgray;stroke:black;stroke-width:1"/>
-      <rect x="38" y="13" width="134" height="64" style="fill:darkgray;stroke:black;stroke-width:1"/>
+    <header>
+      <h1 class="colorVerd">Hola soy Nico</h1>
+      <h2>Estudiante de DAM</h2>
+      <iframe
+        src="switch/switch.html"
+        style="width: 100%; height: 500px; border: none; overflow: hidden"
+      >
+      </iframe>
+    </header>
 
-      <circle cx="17.5" cy="25" r="8" style="fill:dimgray;stroke:black;stroke-width:1"/>
-      <line x1="17.5" y1="17" x2="17.5" y2="33" style="stroke:black;stroke-width:1"/>
-      <line x1="9.5" y1="25" x2="25.5" y2="25" style="stroke:black;stroke-width:1"/>
-      <circle cx="17.5" cy="25" r="5" style="fill:grey;stroke:black;stroke-width:1"/>
-      <circle cx="17.5" cy="42" r="3" style="fill:dimgray;stroke:black;stroke-width:1"/>
-      <circle cx="17.5" cy="54" r="3" style="fill:dimgray;stroke:black;stroke-width:1"/>
-      <circle cx="11.5" cy="48" r="3" style="fill:dimgray;stroke:black;stroke-width:1"/>
-      <circle cx="23.5" cy="48" r="3" style="fill:dimgray;stroke:black;stroke-width:1"/>
+    <main>
+      <section>
+        <ul>
+          Estudios cursados
+          <li class="colorVerd">
+            Bachillerato científico técnologico - Mossen Alcover, Manacor.
+          </li>
+          <li>
+            Diseño y Desarrollo de videojuegos - Universidad de Girona. 2021-23.
+          </li>
+          <li class="colorVerd">
+            Desarrollo de Aplicaciones Multiplataforma - 2025-actualidad.
+          </li>
+        </ul>
+      </section>
 
-      <circle cx="192.5" cy="48" r="8" style="fill:dimgray;stroke:black;stroke-width:1"/>
-      <line x1="192.5" y1="40" x2="192.5" y2="56" style="stroke:black;stroke-width:1"/>
-      <line x1="184.5" y1="48" x2="200.5" y2="48" style="stroke:black;stroke-width:1"/>
-      <circle cx="192.5" cy="48" r="5" style="fill:grey;stroke:black;stroke-width:1"/>
-      <circle cx="192.5" cy="19" r="3" style="fill:dimgray;stroke:black;stroke-width:1"/>
-      <circle cx="192.5" cy="31" r="3" style="fill:dimgray;stroke:black;stroke-width:1"/>
-      <circle cx="186.5" cy="25" r="3" style="fill:dimgray;stroke:black;stroke-width:1"/>
-      <circle cx="198.5" cy="25" r="3" style="fill:dimgray;stroke:black;stroke-width:1"/>
+      <section>
+        <ul>
+          Lenguajes conocidos
+          <li class="colorVerd">
+            C++ a nivel de Estructura de datos y Algoritmos
+          </li>
+          <li>C# en Unity</li>
+          <li class="colorVerd">Python en Godot.</li>
+          <li>Javascript en Phaser.</li>
+          <li class="colorVerd">PHP y MySQL básico</li>
+        </ul>
+      </section>
+    </main>
 
-      <line x1="22" y1="10" x2="26" y2="10" style="stroke:black;stroke-width:1"/>
-      <line x1="184" y1="10" x2="188" y2="10" style="stroke:black;stroke-width:1"/>
-      <line x1="186" y1="8" x2="186" y2="12" style="stroke:black;stroke-width:1"/>
-    </svg>
+    <footer>
+      <nav>
+        <a href="https://x.com/?lang=es">Twitter</a> |
+        <a href="https://www.instagram.com/">Instagram</a> |
+        <a href="https://es.pinterest.com/">Pinterest</a>
+      </nav>
+
+      <address>
+        <p>
+          Contacto:
+          <a href="nico99rueda@gmail.com" property="email"
+            >nico99rueda@gmail.com</a
+          >
+        </p>
+      </address>
+
+      <small>"Copyright © 2025 Nicolás Rueda".</small>
+    </footer>
   </body>
 </html>
