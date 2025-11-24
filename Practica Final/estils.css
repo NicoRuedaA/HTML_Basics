@@ -1,6 +1,10 @@
 @font-face {
-  font-family: "Rubik";
-  src: url(fonts/Rubik/static/Rubik-Regular.ttf);
+  font-family: Monocraft;
+  src: url("./Font/Monocraft.ttc");
+}
+
+* {
+  font-family: Monocraft;
 }
 
 html {
@@ -9,7 +13,6 @@ html {
 
 h2,
 h1 {
-  font-family: "Rubik";
   text-align: center;
 }
 
@@ -26,4 +29,3 @@ img {
   display: block;
   margin: 0 auto;
 }
-
