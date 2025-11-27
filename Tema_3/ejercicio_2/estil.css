@@ -2,7 +2,7 @@ table {
   text-align: center;
   vertical-align: middle;
   background-color: white;
-
+  border: 2px solid darkblue;
   font-size: 14px;
 }
 
@@ -11,12 +11,8 @@ caption {
   font-weight: bold;
 }
 
-table {
-  border: 2px solid darkblue;
-}
-
-thead,
-tfoot {
+thead > tr,
+tfoot > tr {
   text-transform: uppercase;
   background-color: #279c90;
   color: white;
