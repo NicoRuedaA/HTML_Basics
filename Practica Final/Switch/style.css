@@ -22,6 +22,21 @@ body {
 
 .screen-body {
   background: #0d0d0d;
+  border-top: 10px solid #5d5d5d;
+  /* Tu fondo */
+
+  /* El radio del círculo invertido */
+  --r: 8px;
+
+  mask: radial-gradient(var(--r) at 0 0, #0000 98%, #000) 0 0,
+    radial-gradient(var(--r) at 100% 0, #0000 98%, #000) 100% 0,
+    radial-gradient(var(--r) at 0 0, #0000 0, #000) 0 100%,
+    radial-gradient(var(--r) at 0 0, #0000 0, #000) 100% 100%;
+
+  mask-size: 53% 53%;
+  mask-repeat: no-repeat;
+
+  border-radius: 0 0 10px 10px;
 }
 
 .screen {
@@ -30,7 +45,7 @@ body {
   left: 2.5%;
   width: 95%;
   height: 90%;
-  background: #af5d87;
+  background: #d2d2d2;
   background-image: url("/img/background.jpg");
   background-size: cover;
   background-position: center; /* Recomendado para centrar a Mario */
@@ -68,18 +83,6 @@ body {
   border-radius: 50%;
 }
 
-@keyframes move-down {
-  0% {
-    top: 10%;
-  }
-  50% {
-    top: 70%;
-  }
-  100% {
-    top: 10%;
-  }
-}
-
 .logo-right {
   position: absolute;
   top: 15%;
@@ -100,32 +103,46 @@ body {
   border-radius: 50%;
 }
 
-@keyframes move-up {
-  0% {
-    bottom: 10%;
-  }
-  50% {
-    bottom: 70%;
-  }
-  100% {
-    bottom: 10%;
-  }
-}
-
 .joy-con-left {
   position: relative;
-  background: #626b65;
+  background: #88e5a7;
   border-radius: 70px 0 0 70px;
+
+  /* Borde solo arriba */
+  border-top: 10px solid #bbeecc;
+
+  /* Borde solo a la izquierda */
+  border-left: 7px solid #bbeecc;
 }
 
-.joystick-left {
+/* 1. CONFIGURACIÓN COMPARTIDA (Posición y Tamaño) */
+.joystick-left,
+.joystick-left-bottom {
   position: absolute;
-  top: 15%;
-  left: 25%;
+  top: 15%; /* La posición vertical que pediste */
+  left: 25%; /* La posición horizontal que pediste */
   width: 50%;
   height: 17%;
   border-radius: 100%;
-  background: #1a1a1a;
+}
+
+/* 2. CAPA INFERIOR (Estática - El hueco) */
+.joystick-left-bottom {
+  background: #484848; /* Fondo negro para dar profundidad */
+  z-index: 1;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+/* 3. CAPA SUPERIOR (Móvil - La palanca) */
+.joystick-left {
+  background: #1a1a1a; /* Color principal */
+  z-index: 2;
+
+  /* IMPORTANTE: Para que el movimiento WASD sea fluido */
+  transition: transform 0.1s linear;
+
+  /* Sombra para despegarlo del fondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .minus-sign {
@@ -187,18 +204,43 @@ body {
 
 .joy-con-right {
   position: relative;
-  background: #a3a6ae;
+  background: #e681d2;
   border-radius: 0 70px 70px 0;
+  border-top: 10px solid #eea2de;
+
+  /* Borde solo a la izquierda */
+  border-right: 7px solid #eea2de;
 }
 
-.joystick-right {
+.joystick-right,
+.joystick-right-bottom {
   position: absolute;
   bottom: 20%;
   left: 25%;
   width: 50%;
   height: 17%;
-  border-radius: 100%;
-  background: #1a1a1a;
+  border-radius: 100%; /* Crea el óvalo */
+}
+
+.joystick-right-bottom {
+  /* Un poco más oscuro que el joystick para dar profundidad */
+  background: #484848;
+  z-index: 1; /* Se queda al fondo */
+
+  /* Sombra interna opcional: hace que parezca hundido */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+/* 3. CAPA SUPERIOR (Móvil - Tu diseño original) */
+.joystick-right {
+  background: #1a1a1a; /* El color que pediste */
+  z-index: 2; /* Se queda encima */
+
+  /* IMPORTANTE: Necesario para que el JS se mueva suave */
+  transition: transform 0.1s linear;
+
+  /* Sombra externa opcional: para separarlo visualmente del fondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .plus-sign-1 {
