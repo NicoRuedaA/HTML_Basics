@@ -69,24 +69,6 @@ button:hover {
   background-color: #4ac352;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse; /* Elimina els espais entre les cel·les, "fusiona los bordes" */
-}
-
-th {
-  background-color: #2e7d32;
-  color: white;
-  padding: 10px;
-}
-
-td {
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  text-align: center;
-  padding: 10px;
-}
-
 .flexbox {
   display: flex;
   background-color: #75b97a;
@@ -103,4 +85,68 @@ td {
 .flexbox img {
   height: 100px;
   width: 100px;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 10px 30px 30px;
+  grid-gap: 1px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 5px;
+}
+
+.table p.header {
+  background-color: #2e7d32;
+  color: white;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .flexbox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table {
+    background-color: #2e7d32;
+    grid-template-columns: auto;
+    grid-template-rows: 30px;
+    color: white;
+  }
+
+  .table p.header,
+  .table p.name,
+  .table p.punt {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .flexbox {
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .table {
+    background-color: #2e7d32;
+    grid-template-columns: auto auto;
+    grid-template-rows: 30px;
+    color: white;
+  }
+
+  .table p.header,
+  .table p.punt {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .flexbox {
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: center;
+  }
 }
